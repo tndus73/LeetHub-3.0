@@ -117,14 +117,14 @@ function constructGitHubPath(
     console.log('Language:', language);
     if (language) {
       const path = useDifficultyFolder
-        ? `${language}/${difficulty}/${filePath}`
-        : `${language}/${filePath}`;
+        ? `${basePath}/{language}/${difficulty}/${filePath}`
+        : `${basePath}/{language}/${filePath}`;
       return `https://api.github.com/repos/${hook}/contents/${path}`;
     }
   }
   const path = useDifficultyFolder
     ? `${basePath}/${difficulty}/${filePath}`
-    : `${filePath}`;
+    : `${basePath}/{filePath}`;
   return `https://api.github.com/repos/${hook}/contents/${path}`;
 }
 

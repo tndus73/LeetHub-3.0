@@ -273,7 +273,7 @@ const upload = (
   useDifficultyFolder,
   useLanguageFolder,
 ) => {
-  // const URL = `https://api.github.com/repos/${hook}/contents/${problem}/${filename}`;
+  // const URL = `https://api.github.com/repos/${hook}/contents/coding_test/LeetCode/${problem}/${filename}`;
   const URL = constructGitHubPath(
     hook,
     basePath,
